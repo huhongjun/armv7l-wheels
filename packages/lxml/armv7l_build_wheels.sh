@@ -6,6 +6,10 @@ PACKAGE_VERSION=$2
 set -e
 
 build_wheel() (
+
+    yum install -y libxslt-devel
+    yum install -y libxml2-devel
+    
     PY_VER=$1
     VER=$2
     mkdir build$PY_VER
