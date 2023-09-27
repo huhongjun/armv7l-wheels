@@ -7,7 +7,7 @@ WORKDIR /
 
 COPY . /repo
 
-RUN /repo/armv7l_build_wheels.sh ${PYTHON_VERSION} ${VERSION}
+RUN /repo/armv7l_build_wheels.sh ${PYTHON_VERSION} ${VERSION} "lxml"
 
 RUN mkdir -p ${OUTPUT_DIR} && \
     cp build${PYTHON_VERSION}/wheelhouse/lxml*manylinux*armv7l.whl ${OUTPUT_DIR}
