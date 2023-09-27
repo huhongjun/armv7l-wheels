@@ -56,7 +56,7 @@ jobs:
             set -x
             pwd && ls -al
             SH_PREPARE="packages/${{ inputs.package }}/prepare.sh"
-            [ ! -e ${SH_PREPARE} ] && ${SH_PREPARE}
+            [ -e ${SH_PREPARE} ] && ${SH_PREPARE}
 
             # these env vars allows compilation to find local openssl
             export CFLAGS='-I/usr/local/ssl/include'
