@@ -101,7 +101,7 @@ def main() -> None:
         print(f"Usage: {sys.argv[0]} <tag> <package>")
         return
 
-    api = f"https://api.github.com/repos/bjia56/armv7l-wheels/releases/tags/{sys.argv[1]}"
+    api = f"https://api.github.com/repos/huhongjun/armv7l-wheels/releases/tags/{sys.argv[1]}"
     package = sys.argv[2]
 
     release = requests.get(api).json()
